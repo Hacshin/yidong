@@ -1,0 +1,314 @@
+// Name: Form
+//
+// Description: Form and input
+//
+// ============================================================================
+
+.form-group {
+  margin-top: $margin-md;
+  position: relative;
+  &.has-error {
+    .help-block{
+      color: $global-orange;
+    }
+    .form-control, .form-control:focus{
+      border-color: $global-orange;
+    }
+    .input-icon {
+      background-image: url('https://static.souyidai.com/wap/2.0/images/input_error@2x.png');
+    }
+  }
+  &.form-active{
+    .input-icon {
+      background-image: url('https://static.souyidai.com/wap/2.0/images/input_cancel@2x.png');
+    }
+  }
+  .form-control:focus {
+    border-color: $global-main;
+  }
+  label {
+    display: inline-block;
+    max-width: 100%;
+    font-size: $font-sm;
+    color: $text-lighter;
+  }
+  .input-icon{
+    @include size(1.1rem);
+    background-size: 0.34rem 0.34rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .help-block {
+    color: $text-light;
+    font-size: $font-xs;
+    margin: 0;
+    padding-left: $padding-md;
+  }
+  .form-control {
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    padding: $padding-md;
+    font-size: $font-lg;
+    color: $text-normal;
+    background-color: $white;
+    border: 1px solid $border-dark;
+    border-radius: $border-radius;
+    transition: border-color ease-in-out .15s;
+    outline: 0;
+    resize: none;
+    &.disabled{
+      background-color:$border-light;
+      color: $gray-darker!important;
+    }
+  }
+  ::-webkit-input-placeholder {
+    color: $gray-darker;
+  }
+}
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  &.has-error{
+    padding-bottom: $padding-base;
+    .help-block{
+      position: absolute;
+      top: 1.2rem;
+      z-index: 3;
+    }
+  }
+  .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    display: table-cell;
+    border-right-color: $border-light;
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  .input-group-addon {
+    //padding: 6px 12px;
+    //font-size: 14px;
+    //font-weight: 400;
+    line-height: 1;
+    //color: #555;
+    //text-align: center;
+    //background-color: #fff;
+    overflow: hidden;
+    border: 1px solid $border-dark;
+    border-radius: $border-radius;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+    .img-code {
+      height: 1.06rem;
+      width: 2.8rem;
+      vertical-align: middle;
+    }
+    &.unit{
+      font-size: $font-lg;
+      color: $text-lighter;
+      padding: $padding-md;
+      background-color: $white;
+      //width: 1rem;
+    }
+  }
+  .input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    .btn{
+      margin: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      height: 1.1rem;
+      font-size: $font-lg;
+      border:none;
+      width: 2.8rem;
+      border: 1px solid $border-dark;
+      border-left: none;
+    }
+  }
+}
+.form-list-group{
+  margin-top: $margin-xxl;
+  background-color: $white;
+  .form-list-title{
+    font-size: $font-sm;
+    margin: 0;
+    padding-bottom: $margin-xs;
+    padding-left: $padding-base;
+    background-color: $gray;
+  }
+  .form-list-error {
+    font-size: $font-sm;
+    margin: 0;
+    padding-left: $padding-base;
+    background-color: $gray;
+    color: $global-orange;
+  }
+  .form-list-item{
+    display: flex;
+    font-size: $font-xl;
+    padding: $padding-md 0;
+    align-items: center;
+    height: px2rem(90);
+    &:nth-child(2){
+      border-top: 1px solid $border-dark;
+    }
+    &:last-child{
+      border-bottom: 1px solid $border-dark;
+    }
+    &:not(:last-child){
+      border-bottom: 1px solid $border-light;
+    }
+    label{
+      margin-left: $margin-base;
+    }
+    .form-control{
+      font-size: $font-xl;
+      color: $text-light;
+      -webkit-appearance: none;
+      flex: 1;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      text-align: right;
+      //height: px2rem(40);
+      //line-height: 1;
+      &.disabled{
+        color: $gray-darker!important;
+        -webkit-text-fill-color: $gray-darker;
+      }
+    }
+    select{
+      direction: rtl;
+    }
+    .icon-box{
+      @include size(px2rem(70), px2rem(30));
+      &.icon-chevron{
+        background: url('https://static.souyidai.com/wap/2.0/images/chevon_right@2x.png') center center no-repeat;
+        background-size: contain;
+      }
+      &.icon-error{
+        background: url('https://static.souyidai.com/wap/2.0/images/input_error@2x.png') center center no-repeat;
+        background-size: contain;
+      }
+    }
+    &.no-label {
+      padding-left: $padding-base;
+      .form-control {
+        text-align: left;
+      }
+    }
+  }
+  textarea.form-control{
+    border:none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    border-top: 1px solid $border-dark;
+    border-bottom: 1px solid $border-dark;
+    outline: 0;
+    resize: none;
+    width: 100%;
+    font-size: $font-lg;
+    padding: $padding-base;
+    line-height: 1.2;
+    &.disabled{
+      color: $gray-darker!important;
+      background-color: $white;
+    }
+  }
+  &.normal-form {
+    .form-control {
+      text-align: left;
+      padding-left: $padding-base;
+    }
+    select {
+      direction: ltr;
+    }
+  }
+}
+.form-list-tip {
+  font-size: $font-xs;
+  margin-bottom: $margin-xs;
+  margin-top: $margin-xxl;
+  padding-left: $padding-base;
+  color: $text-lighter;
+}
+.form-upload {
+  margin-bottom: $margin-base;
+  background-color: $white;
+  border-top: 1px $border-dark solid;
+  border-bottom: 1px $border-dark solid;
+  padding: 0 $padding-base;
+  .form-upload-lable {
+    font-size: $font-lg;
+  }
+  .form-upload-input {
+    @include size(px2rem(160));
+    outline: none;
+    border: 1px $global-main dotted;
+    background-color: transparent;
+    border-radius: $border-radius;
+    background: url('https://static.souyidai.com/wap/2.0/images/upload.png') center center no-repeat;
+    background-size: px2rem(100) px2rem(68);
+    transition: all ease 0.3s;
+    display: inline-block;
+    color: transparent;
+    vertical-align: top;
+    &:hover {
+      background-color: $border-light;
+    }
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+  }
+  .row {
+    overflow-x: scroll;
+    height: 2.3rem;
+    padding-top: $padding-xs;
+  }
+  .form-upload-count {
+    text-align: right;
+    color: $text-lighter;
+    font-size: $font-xs;
+    margin: $margin-md 0;
+  }
+  .form-upload-image {
+    display: inline-block;
+    position: relative;
+    margin-left: $margin-xs;
+    img {
+      border-radius: $border-radius;
+      @include size(px2rem(160));
+    }
+    .icon-close {
+      @include size((40/$r)*1rem);
+      background-image: url('https://static.souyidai.com/wap/2.0/images/close.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: -$padding-xs;
+      right: -0.1rem;
+    }
+  }
+}

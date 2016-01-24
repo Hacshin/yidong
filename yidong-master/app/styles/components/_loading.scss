@@ -1,0 +1,35 @@
+// Name: Loading
+//
+// Description: Loading style
+//
+// ============================================================================
+
+.loader-back {
+  position: fixed;
+  top: -5rem;
+  bottom: -5rem;
+  left: -5rem;
+  right: -5rem;
+  background-color: transparent;
+  display: none;
+  z-index: 100;
+}
+.loader {
+  display: none;
+  position: fixed;
+  top: px2rem(430);
+  left: px2rem(260);
+  @include size(px2rem(220));
+  background-color: rgba(0, 0, 0, 0.6 );
+  z-index: 101;
+  border-radius: $border-radius;
+  padding: $padding-base;
+  .loader-svg {
+    .loader-circle {
+      fill: $white;
+    }
+    .loader-path {
+      fill: $global-main;
+    }
+  }
+}

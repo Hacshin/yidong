@@ -1,0 +1,15 @@
+// Name: Functions
+//
+// Description:Utilities Functions
+//
+// ============================================================================
+
+/// function to calculate px to rem
+@function px2rem ($px) {
+  @return ($px / $r) * 1rem;
+}
+
+/// function to calculate rem to px
+@function rem2px ($rem) {
+  @return ($rem * $r) * 1px;
+}

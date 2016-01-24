@@ -1,0 +1,123 @@
+// Name: Headar
+//
+// Description: header nav bar
+//
+// ============================================================================
+.nav {
+  height: px2rem(88);
+  background-color: $global-main;
+  display: flex;
+  padding: 0 $padding-base;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  &.nav-fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  &.nav-gradient {
+    background-image: linear-gradient(0deg, #2f488f, #314990);
+    .nav-left-text {
+      padding-left: $padding-md;
+    }
+  }
+  .icon-back {
+    @include size(px2rem(50));
+    background-image: url('https://static.souyidai.com/wap/2.0/images/back@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+  .icon-menu {
+    @include size(px2rem(40));
+    background-image: url('https://static.souyidai.com/wap/2.0/images/menu.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    display: block;
+  }
+  .icon-help {
+    @include size(px2rem(40));
+    background-image: url('https://static.souyidai.com/wap/2.0/images/help.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    display: block;
+  }
+  .nav-title {
+    color: $white;
+    font-size: $font-xxl;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+    span {
+      font-size: $font-xs;
+    }
+  }
+  .nav-right,
+  .nav-left {
+    min-width: 0.8rem;
+  }
+  a {
+    font-size: $font-lg;
+    color: $white;
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+  .btn-nav {
+    background-color: $white;
+    color: $global-main;
+    padding: $padding-xs $padding-base;
+    border-radius: $border-radius;
+    border: none;
+    font-size: $font-lg;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 300ms ease-out, border-color 300ms ease-out;
+    outline: none;
+    line-height: 1;
+    &.btn-disabled {
+      background-color: $button-default-disable;
+    }
+  }
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 1.2rem;
+    right: 0.3rem;
+    border-radius: $border-radius;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 1;
+    .nav-menu-triangle {
+      position: absolute;
+      top: -0.2rem;
+      right: 0.25rem;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0.2rem 0.2rem 0.2rem;
+      border-color: transparent transparent rgba(0,0,0,0.8) transparent;
+    }
+    .nav-menu-item {
+      color: $white;
+      font-size: $font-xl;
+      padding: $padding-md $padding-lg;
+      &:not(:last-child) {
+        border-bottom: 1px rgba( 255, 255, 255 ,0.2) solid;
+      }
+    }
+    &.ng-hide-add, &.ng-hide-remove {
+      transition: 0.3s ease all;
+    }
+    &.ng-hide {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,483 @@
+// Name: Page 4g
+//
+// Description: 4g styles
+//
+// ============================================================================
+//img mixin
+@mixin img($url) {
+  position: absolute;
+  background: url($url) no-repeat;
+  background-size: 100%;
+}
+html, body, .container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  color: $black;
+}
+body {
+  transition: background-color 0.3s ease-in-out;
+}
+.container {
+  max-width: 640px;
+  margin: auto;
+}
+.hide {
+  display: none;
+}
+.clear {
+  clear: both;
+}
+.sec {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.45s linear;
+  transform: translateY(0px);
+  -webkit-backface-visibility: hidden;
+  text-align: center;
+  section {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    -webkit-backface-visibility: hidden;
+  }
+  .scroll {
+    @include size(px2rem(30), px2rem(31));
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0.26rem;
+    @include img('../images/arrow.png');
+    z-index: 4;
+    animation: scroll 2s infinite;
+  }
+}
+.drag {
+  transition: none;
+}
+.logo {
+  @include size(px2rem(109), px2rem(60));
+  @include img('../images/logo.png');
+  margin: auto;
+  left: px2rem(32);
+  top: px2rem(39);
+  opacity: 0;
+}
+.sec-show {
+  .logo {
+    animation: fadeIn 1s ease-out 0.4s forwards;
+  }
+}
+.sec-chunyun {
+  background-image: url('../images/back-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .text-1 {
+    @include size(px2rem(351), px2rem(216));
+    @include img('../images/text-1.png');
+    margin: auto;
+    left: px2rem(150);
+    top: px2rem(201);
+    opacity: 0;
+  }
+  .info-1 {
+    @include size(px2rem(225), px2rem(117));
+    @include img('../images/info-1.png');
+    margin: auto;
+    left: px2rem(351);
+    top: px2rem(619);
+    opacity: 0;
+  }
+  .btn-1 {
+    @include size(px2rem(213), px2rem(81));
+    @include img('../images/btn-1.png');
+    margin: auto;
+    left: px2rem(351);
+    top: px2rem(719);
+    opacity: 0;
+  }
+  .weixin-1 {
+    @include size(px2rem(265), px2rem(82));
+    @include img('../images/weixin-1.png');
+    margin: auto;
+    left: px2rem(357);
+    top: px2rem(821);
+    opacity: 0;
+  }
+  .tag-1 {
+    @include size(px2rem(124), px2rem(93));
+    @include img('../images/tag-1.png');
+    margin: auto;
+    left: px2rem(53);
+    top: px2rem(136);
+    opacity: 0;
+  }
+}
+
+.sec-chunyun.sec-show {
+  .text-1 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+  .tag-1 {
+    animation: bounceInUp 1.2s ease-out 0.6s forwards;
+  }
+  .info-1 {
+    animation: fadeInUp 0.6s ease-out 0.8s forwards;
+  }
+  .btn-1 {
+    animation: fadeInUp 0.6s ease-out 1.2s forwards;
+  }
+  .weixin-1 {
+    animation: fadeInUp 0.6s ease-out 1.6s forwards;
+  }
+}
+.sec-shuaping {
+  background-image: url('../images/back-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .text-2 {
+    @include size(px2rem(290), px2rem(217));
+    @include img('../images/text-2.png');
+    margin: auto;
+    left: px2rem(172);
+    top: px2rem(184);
+    opacity: 0;
+  }
+  .info-2 {
+    @include size(px2rem(324), px2rem(95));
+    @include img('../images/info-2.png');
+    margin: auto;
+    left: px2rem(42);
+    top: px2rem(632);
+    opacity: 0;
+  }
+  .weixin-2 {
+    @include size(px2rem(266), px2rem(82));
+    @include img('../images/weixin-2.png');
+    margin: auto;
+    left: px2rem(42);
+    top: px2rem(803);
+    opacity: 0;
+  }
+  .tag-2 {
+    @include size(px2rem(124), px2rem(93));
+    @include img('../images/tag-2.png');
+    margin: auto;
+    left: px2rem(50);
+    top: px2rem(131);
+    opacity: 0;
+  }
+}
+.sec-shuaping.sec-show {
+  .text-2 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+  .tag-2 {
+    animation: bounceInUp 1s ease-out 0.6s forwards;
+  }
+  .info-2{
+    animation: fadeInUp 0.6s ease-out 0.8s forwards;
+  }
+  .weixin-2 {
+    animation: fadeInUp 0.6s ease-out 1.2s forwards;
+  }
+}
+.sec-yemao {
+  background-image: url('../images/back-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .text-3 {
+    @include size(px2rem(368), px2rem(175));
+    @include img('../images/text-3.png');
+    margin: auto;
+    left: px2rem(134);
+    top: px2rem(233);
+    opacity: 0;
+  }
+  .info-3 {
+    @include size(px2rem(531), px2rem(65));
+    @include img('../images/info-3.png');
+    margin: auto;
+    left: px2rem(52);
+    top: px2rem(452);
+    opacity: 0;
+  }
+  .btn-1 {
+    @include size(px2rem(213), px2rem(81));
+    @include img('../images/btn-1.png');
+    margin: auto;
+    left: px2rem(357);
+    top: px2rem(545);
+    opacity: 0;
+  }
+  .weixin-1 {
+    @include size(px2rem(265), px2rem(82));
+    @include img('../images/weixin-1.png');
+    margin: auto;
+    left: px2rem(367);
+    top: px2rem(635);
+    opacity: 0;
+  }
+  .tag-3 {
+    @include size(px2rem(124), px2rem(93));
+    @include img('../images/tag-3.png');
+    margin: auto;
+    left: px2rem(52);
+    top: px2rem(146);
+    opacity: 0;
+  }
+}
+.sec-yemao.sec-show {
+  .text-3 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+  .tag-3 {
+    animation: bounceInUp 1s ease-out 0.6s forwards;
+  }
+  .info-3{
+    animation: fadeInUp 0.6s ease-out 0.8s forwards;
+  }
+  .btn-1 {
+    animation: fadeInUp 0.6s ease-out 1.2s forwards;
+  }
+  .weixin-1 {
+    animation: fadeInUp 0.6s ease-out 1.6s forwards;
+  }
+}
+.sec-lvyou {
+  background-image: url('../images/back-4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .text-4 {
+    @include size(px2rem(390), px2rem(247));
+    @include img('../images/text-4.png');
+    margin: auto;
+    left: px2rem(144);
+    top: px2rem(180);
+    opacity: 0;
+  }
+  .info-4 {
+    @include size(px2rem(324), px2rem(124));
+    @include img('../images/info-4.png');
+    margin: auto;
+    left: px2rem(280);
+    top: px2rem(616);
+    opacity: 0;
+  }
+  .btn-1 {
+    @include size(px2rem(213), px2rem(81));
+    @include img('../images/btn-1.png');
+    margin: auto;
+    left: px2rem(280);
+    top: px2rem(756);
+    opacity: 0;
+  }
+  .weixin-1 {
+    @include size(px2rem(265), px2rem(82));
+    @include img('../images/weixin-1.png');
+    margin: auto;
+    left: px2rem(280);
+    top: px2rem(850);
+    opacity: 0;
+  }
+  .tag-4 {
+    @include size(px2rem(151), px2rem(98));
+    @include img('../images/tag-4.png');
+    margin: auto;
+    left: px2rem(50);
+    top: px2rem(125);
+    opacity: 0;
+  }
+}
+.sec-lvyou.sec-show {
+  .text-4 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+  .tag-4 {
+    animation: bounceInUp 1s ease-out 0.6s forwards;
+  }
+  .info-4{
+    animation: fadeInUp 0.6s ease-out 0.8s forwards;
+  }
+  .btn-1 {
+    animation: fadeInUp 0.6s ease-out 1.2s forwards;
+  }
+  .weixin-1 {
+    animation: fadeInUp 0.6s ease-out 1.6s forwards;
+  }
+}
+.sec-yueguang {
+  background-image: url('../images/back-5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .text-5 {
+    @include size(px2rem(402), px2rem(183));
+    @include img('../images/text-5.png');
+    margin: auto;
+    left: px2rem(99);
+    top: px2rem(175);
+    opacity: 0;
+  }
+  .info-5 {
+    @include size(px2rem(243), px2rem(162));
+    @include img('../images/info-5.png');
+    margin: auto;
+    left: px2rem(343);
+    top: px2rem(546);
+    opacity: 0;
+  }
+  .btn-1 {
+    @include size(px2rem(213), px2rem(81));
+    @include img('../images/btn-1.png');
+    margin: auto;
+    left: px2rem(343);
+    top: px2rem(680);
+    opacity: 0;
+  }
+  .weixin-1 {
+    @include size(px2rem(265), px2rem(82));
+    @include img('../images/weixin-1.png');
+    margin: auto;
+    left: px2rem(343);
+    top: px2rem(785);
+    opacity: 0;
+  }
+  .tag-5 {
+    @include size(px2rem(124), px2rem(93));
+    @include img('../images/tag-5.png');
+    margin: auto;
+    left: px2rem(50);
+    top: px2rem(134);
+    opacity: 0;
+  }
+}
+.sec-yueguang.sec-show {
+  .text-5 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+  .tag-5 {
+    animation: bounceInUp 1s ease-out 0.6s forwards;
+  }
+  .info-5{
+    animation: fadeInUp 0.6s ease-out 0.8s forwards;
+  }
+  .btn-1 {
+    animation: fadeInUp 0.6s ease-out 1.2s forwards;
+  }
+  .weixin-1 {
+    animation: fadeInUp 0.6s ease-out 1.6s forwards;
+  }
+}
+.sec-fenxiang {
+  background-image: url('../images/back-6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .main-6 {
+    @include size(px2rem(328), px2rem(469));
+    @include img('../images/main-6.png');
+    margin: auto;
+    left: px2rem(93);
+    top: px2rem(260);
+    opacity: 0;
+  }
+  .text-6 {
+    @include size(px2rem(370), px2rem(90));
+    @include img('../images/text-6.png');
+    margin: auto;
+    left: px2rem(118);
+    top: px2rem(822);
+    opacity: 0;
+  }
+  .num {
+    font-size: px2rem(24);
+    color: $white;
+    margin: 0;
+    text-align: left;
+    line-height: 1.2;
+    opacity: 0;
+    span {
+      font-size: px2rem(33);
+      color: #fffc00;
+      font-weight: bold;
+    }
+    &.num-1 {
+      position: absolute;
+      top: px2rem(160);
+      left: px2rem(81);
+    }
+    &.num-2 {
+      position: absolute;
+      top: px2rem(286);
+      left: px2rem(374);
+    }
+    &.num-3 {
+      position: absolute;
+      top: px2rem(688);
+      left: px2rem(135);
+    }
+  }
+}
+.sec-fenxiang.sec-show {
+  .main-6 {
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
+  }
+  .num-1 {
+    animation: fadeInUp 0.6s ease-out 0.8s forwards;
+  }
+  .num-2 {
+    animation: fadeInUp 0.6s ease-out 1.2s forwards;
+  }
+  .num-3 {
+    animation: fadeInUp 0.6s ease-out 1.6s forwards;
+  }
+  .text-6 {
+    animation: fadeInUp 0.6s ease-out 2s forwards;
+  }
+}
+.sec-end {
+  background-image: url('../images/back-6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .main-7 {
+    @include size(px2rem(449), px2rem(386));
+    @include img('../images/main-7.png');
+    margin: auto;
+    left: px2rem(84);
+    top: px2rem(194);
+    opacity: 0;
+  }
+  .btn-2 {
+    @include size(px2rem(324), px2rem(77));
+    @include img('../images/btn-2.png');
+    margin: auto;
+    left: px2rem(156);
+    top: px2rem(801);
+    opacity: 0;
+  }
+  .btn-3 {
+    @include size(px2rem(640), px2rem(80));
+    @include img('../images/btn-3.png');
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+}
+.sec-end.sec-show {
+  .main-7 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+  .btn-2 {
+    animation: fadeInUp 0.6s ease-out 0.8s forwards;
+  }
+  .btn-3 {
+    animation: fadeIn 0.6s ease-out 1.2s forwards;
+  }
+}

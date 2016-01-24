@@ -1,0 +1,149 @@
+// Name: Button
+//
+// Description: button styles
+//
+// ============================================================================
+
+.btn-box{
+  display: flex;
+  padding: 0 $padding-base;
+  .btn:not(:last-child){
+    margin-right: $margin-md;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: $padding-md 0;
+  margin: $margin-base 0 0 0;
+  font-size: $font-xxxl;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  transition: background-color 300ms ease-out, border-color 300ms ease-out;
+  outline: none;
+  flex: 1;
+  line-height: 1;
+  &.btn-default {
+    color: $white;
+    background-color: $global-main;
+    &:active{
+      background-color: $button-default-active;
+    }
+    &.btn-disabled {
+      background-color: $button-default-disable;
+    }
+  }
+  &.btn-second {
+    color: $global-main;
+    background-color: $white;
+    border: 1px $global-main solid;
+    &:active{
+      background-color: $button-second-active;
+    }
+    &.btn-disabled {
+      background-color: $button-second-disable;
+      color: $gray-darker;
+      border: 1px solid transparent;
+    }
+  }
+  &.btn-third {
+    color: $text-normal;
+    background-color: $gray;
+    border: 1px $border-dark solid;
+    &:active{
+      background-color: $button-third-active;
+    }
+    &.btn-disabled {
+      background-color: $button-third-disable;
+      color: $gray-darker;
+    }
+  }
+  &.btn-simple {
+    color: $text-light;
+    background-color: $white;
+    border: 1px $border-dark solid;
+    &:active{
+      background-color: $button-third-active;
+    }
+    &.btn-disabled {
+      color: $gray-darker;
+    }
+  }
+  &.btn-block{
+    display: block;
+    width: 100%;
+  }
+}
+.btn-xs{
+  padding: $padding-md;
+  margin: 0;
+  font-size: $font-lg;
+}
+.btn-bottom{
+  width: 100%;
+  height: 1.53rem;
+  position: fixed;
+  bottom: 0;
+  background-color:$global-main;
+  .text{
+    text-align: center;
+    color: $white;
+    font-size: $font-xxxl;
+    height: 1.53rem;
+    line-height:1.53rem;
+    transition: background-color 300ms ease-out, border-color 300ms ease-out;
+    &:active{
+      background-color: $button-default-active;
+    }
+    &.muilt-line{
+      line-height: 0.5rem;
+      padding-top: $margin-md;
+    }
+    &.border-left{
+      border-left: 1px $global-main-light solid;
+    }
+    span{
+      font-size: $font-xs;
+    }
+  }
+  .cal{
+    background: url('https://static.souyidai.com/wap/2.0/images/calculator_n@2x.png') center center no-repeat;
+    background-size: 100% auto;
+    width: 1.53rem;
+    height: 1.53rem;
+    display: none;
+    float: left;
+    transition: background 300ms ease;
+    &:active{
+      background: url('https://static.souyidai.com/wap/2.0/images/calculator_o@2x.png') center center no-repeat;
+      background-size: 100% auto;
+    }
+  }
+}
+// .event-btn{
+//   width: 100%;
+//   height: 2.49rem;
+//   position: fixed;
+//   bottom: 0;
+//   background: url('https://static.souyidai.com/wap/2.0/images/weixin_shake/shake_bottom_bg.png') center center no-repeat;
+//   background-size: 100% auto;
+//   .event-shake-phone{
+//     width: 1.85rem;
+//     height: 2.62rem;
+//     background: url('https://static.souyidai.com/wap/2.0/images/weixin_shake/shake_bottom_phone.png') center center no-repeat;
+//     background-size: 100% auto;
+//     margin-left: 5rem;
+//     animation: phone_move 2.2s linear -1.2s infinite;
+//   }
+// }
+// @keyframes phone_move{
+//   0%{}
+//   70%{ transform: rotate(0deg); }
+//   76%{ transform: rotate(-20deg); }
+//   82%{ transform: rotate(20deg); }
+//   85%{ transform: rotate(-10deg); }
+//   88%{ transform: rotate(10deg); }
+//   100%{ transform: rotate(0deg); }
+// }
